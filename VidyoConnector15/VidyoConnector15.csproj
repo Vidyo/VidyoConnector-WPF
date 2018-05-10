@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33E07BFC-8AB0-4A37-8A40-675B54AAD9AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VidyoConnector</RootNamespace>
+    <AssemblyName>VidyoConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\small.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="..\..\..\..\include\csharp\AudioFrame.cs">
+      <Link>sdk\AudioFrame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\BandwidthSummaryStats.cs">
+      <Link>sdk\BandwidthSummaryStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarCreateResult.cs">
+      <Link>sdk\CalendarCreateResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarFeedback.cs">
+      <Link>sdk\CalendarFeedback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarManagerDefaultServices.cs">
+      <Link>sdk\CalendarManagerDefaultServices.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarManagerFeedback.cs">
+      <Link>sdk\CalendarManagerFeedback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarServiceCode.cs">
+      <Link>sdk\CalendarServiceCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarServiceStatus.cs">
+      <Link>sdk\CalendarServiceStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarState.cs">
+      <Link>sdk\CalendarState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\ChatMessage.cs">
+      <Link>sdk\ChatMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Connector.cs">
+      <Link>sdk\Connector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\ConnectorPKG.cs">
+      <Link>sdk\ConnectorPKG.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Contact.cs">
+      <Link>sdk\Contact.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\ContactInfo.cs">
+      <Link>sdk\ContactInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Device.cs">
+      <Link>sdk\Device.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\EndpointStats.cs">
+      <Link>sdk\EndpointStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\FormField.cs">
+      <Link>sdk\FormField.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\FormFieldOption.cs">
+      <Link>sdk\FormFieldOption.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\FormFieldTextWrapMode.cs">
+      <Link>sdk\FormFieldTextWrapMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\FormFieldType.cs">
+      <Link>sdk\FormFieldType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Gateway.cs">
+      <Link>sdk\Gateway.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LatencyTestDataStats.cs">
+      <Link>sdk\LatencyTestDataStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LatencyTestStats.cs">
+      <Link>sdk\LatencyTestStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalCamera.cs">
+      <Link>sdk\LocalCamera.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalMicrophone.cs">
+      <Link>sdk\LocalMicrophone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalMicrophoneStats.cs">
+      <Link>sdk\LocalMicrophoneStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalMonitor.cs">
+      <Link>sdk\LocalMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalRenderer.cs">
+      <Link>sdk\LocalRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalRendererStats.cs">
+      <Link>sdk\LocalRendererStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalRendererStreamStats.cs">
+      <Link>sdk\LocalRendererStreamStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalSpeaker.cs">
+      <Link>sdk\LocalSpeaker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalSpeakerStats.cs">
+      <Link>sdk\LocalSpeakerStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalSpeakerStreamStats.cs">
+      <Link>sdk\LocalSpeakerStreamStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalVideoSourceStats.cs">
+      <Link>sdk\LocalVideoSourceStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LocalWindowShare.cs">
+      <Link>sdk\LocalWindowShare.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LogDataStats.cs">
+      <Link>sdk\LogDataStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Logger.cs">
+      <Link>sdk\Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LogRecord.cs">
+      <Link>sdk\LogRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LogStats.cs">
+      <Link>sdk\LogStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MediaConnectionTransportInfo.cs">
+      <Link>sdk\MediaConnectionTransportInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MediaFormat.cs">
+      <Link>sdk\MediaFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Meeting.cs">
+      <Link>sdk\Meeting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingActionResult.cs">
+      <Link>sdk\MeetingActionResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingAttendee.cs">
+      <Link>sdk\MeetingAttendee.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingSearchResult.cs">
+      <Link>sdk\MeetingSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingType.cs">
+      <Link>sdk\MeetingType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\NetworkInterface.cs">
+      <Link>sdk\NetworkInterface.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\NetworkInterfaceStats.cs">
+      <Link>sdk\NetworkInterfaceStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Participant.cs">
+      <Link>sdk\Participant.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\ParticipantGenerationStats.cs">
+      <Link>sdk\ParticipantGenerationStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\ParticipantStats.cs">
+      <Link>sdk\ParticipantStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RateShaperStats.cs">
+      <Link>sdk\RateShaperStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteCamera.cs">
+      <Link>sdk\RemoteCamera.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteMicrophone.cs">
+      <Link>sdk\RemoteMicrophone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteMicrophoneStats.cs">
+      <Link>sdk\RemoteMicrophoneStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteRenderer.cs">
+      <Link>sdk\RemoteRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteRendererStreamStats.cs">
+      <Link>sdk\RemoteRendererStreamStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteSpeaker.cs">
+      <Link>sdk\RemoteSpeaker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteSpeakerStreamStats.cs">
+      <Link>sdk\RemoteSpeakerStreamStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteVideoSourceStats.cs">
+      <Link>sdk\RemoteVideoSourceStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RemoteWindowShare.cs">
+      <Link>sdk\RemoteWindowShare.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RoomStats.cs">
+      <Link>sdk\RoomStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Statistics.cs">
+      <Link>sdk\Statistics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\UserStats.cs">
+      <Link>sdk\UserStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VideoCapability.cs">
+      <Link>sdk\VideoCapability.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VideoFrame.cs">
+      <Link>sdk\VideoFrame.cs</Link>
+    </Compile>
+    <Compile Include="Commands\BindableCommand.cs" />
+    <Compile Include="Converters\ConnectionStateToVisibilityConverter.cs" />
+    <Compile Include="Listeners\ConnectionListener.cs" />
+    <Compile Include="Listeners\ListenerBase.cs" />
+    <Compile Include="Listeners\LocalMicropfoneListener.cs" />
+    <Compile Include="Listeners\LocalMonitorListener.cs" />
+    <Compile Include="Listeners\LocalSpeakerListener.cs" />
+    <Compile Include="Listeners\LogListener.cs" />
+    <Compile Include="Listeners\ParticipantListener.cs" />
+    <Compile Include="Model\ConnectionState.cs" />
+    <Compile Include="Model\LocalCameraModel.cs" />
+    <Compile Include="Listeners\LocalCameraListener.cs" />
+    <Compile Include="Listeners\LocalWindowShareListener.cs" />
+    <Compile Include="Model\LocalMicrophoneModel.cs" />
+    <Compile Include="Model\LocalMonitorModel.cs" />
+    <Compile Include="Model\LocalSpeakerModel.cs" />
+    <Compile Include="Model\LocalWindowShareModel.cs" />
+    <Compile Include="Model\DeviceModelBase.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\VidyoConnectorViewModel.cs" />
+    <Page Include="VidyoConnector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VidyoConnector.xaml.cs">
+      <DependentUpon>VidyoConnector.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\small.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\VidyoIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\callStartBlackBground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cameraOnBlackBground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\microphoneOnBlackBground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\callEndBlackBground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\cameraOffBlackBground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\microphoneOffBlackBground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stopsharingTransparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Vidyo.io-Vertical-Dark%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>c:\windows\system32\xcopy.exe /y "$(SolutionDir)\..\..\..\lib\windows\$(Platform)\Release\libVidyoClient.dll" "$(TargetDir)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
