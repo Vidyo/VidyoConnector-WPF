@@ -8,7 +8,7 @@ VidyoConnector-WPF is a Windows desktop application written in C# using WPF tech
 
 ## Acquire Framework
 1. Download the latest Vidyo.io Windows SDK package for VisualStudio 2013 (https://static.vidyo.io/4.1.22.9/package/VidyoClient-WindowsSDK.zip) or for VisualStudio 2017 (https://static.vidyo.io/4.1.22.9/package/VidyoClient-WinVS2017SDK.zip).
-2. Extract cintents and locate '~\VidyoClient-WindowsSDK\samples\VidyoConnector' folder.
+2. Extract contents and locate '~\VidyoClient-WindowsSDK\samples\VidyoConnector' folder.
 
 ## Build and Run Application
 1. Put VidyoConnector-WPF sources into folder located above, parallel to the 'win' folder.
@@ -20,5 +20,5 @@ VidyoConnector-WPF is a Windows desktop application written in C# using WPF tech
 4. Run solution in debug or release mode.
 
 ## Notes
-1. All files/classes in the 'sdk' solution folder are added as links to actual files in the SDK. So pay attention to its relative pathes.
-2. In the SDK packege, '~\VidyoClient-WindowsSDK\lib\windows\' folder you will find 'Win32' and 'x64' folder, which both contains libVidyoClient.dll of appropriate application. The post-build events mentioned in note above should copy relevant version of this library to the sample's output in order to run and dedug the solution. So, if you are building sample application targeting x86 architecture, you should have libVidyoClient.dll in its output taekn from 'Win32' SDK folder. And if you are building sample application targeting x64 architecture, you should have libVidyoClient.dll in its output taken from 'x64' SDK folder.
+1. All files/classes in the 'sdk' solution folder are added as links to actual files in the SDK. So pay attention to its relative paths.
+2. In the SDK package, '~\VidyoClient-WindowsSDK\lib\windows\' folder you will find 'Win32' and 'x64' folder, which both contain libVidyoClient.dll of appropriate architecture. The post-build events mentioned in note above should copy relevant version of this library to the sample's output in order to run and dedug the solution. So, if you are building sample application targeting x86 architecture, you should have libVidyoClient.dll in its output taken from 'Win32' SDK folder. And if you are building sample application targeting x64 architecture, you should have libVidyoClient.dll in its output taken from 'x64' SDK folder.
