@@ -804,7 +804,7 @@ namespace VidyoConnector.ViewModel
         private void ShowAbout()
         {
             MessageBox.Show(
-                "VidyoConnector App version 4.1.21.7\r\n\r\nCopyright (C) 2017 Vidyo. All rights reserved.",
+                "VidyoClient-WinSDK Version " + _connector.GetVersion() + "\r\n\r\nCopyright © 2017-2018 Vidyo, Inc. All rights reserved.",
                 "About VidyoConnector", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 

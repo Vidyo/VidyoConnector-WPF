@@ -27,7 +27,7 @@ namespace VidyoConnector.Listeners
             }
         }
 
-        public void OnDynamicParticipantChanged(List<Participant> participants, List<RemoteCamera> remoteCameras)
+        public void OnDynamicParticipantChanged(List<Participant> participants)
         {
             
         }
