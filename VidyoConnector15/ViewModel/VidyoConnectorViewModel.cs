@@ -615,10 +615,10 @@ namespace VidyoConnector.ViewModel
             set { _token = value; OnPropertyChanged(); }
         }
 
-        private string _userName;
-        public string UserName {
-            get { return _userName; }
-            set { _userName = value; OnPropertyChanged(); }
+        private string _displayName;
+        public string DisplayName {
+            get { return _displayName; }
+            set { _displayName = value ?? string.Empty; OnPropertyChanged(); }
         }
 
         private string _roomId;

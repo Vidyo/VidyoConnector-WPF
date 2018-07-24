@@ -1,2 +1,12 @@
 VidyoConnector15/bin
 VidyoConnector15/obj
+*.ide-wal
+*.ide-shm
+package-lock.json
+*.
+*.
+*.ide
+*.lock
+*.
+.dtbcache
+.suo

@@ -201,7 +201,7 @@
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="Token" />
                     <TextBox Grid.Row="1" Grid.Column="1" Name="Token" Text="{Binding Token}"/>
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="Display Name" />
-                    <TextBox Grid.Row="2" Grid.Column="1" Name="DisplayName" Text="{Binding UserName}"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Name="DisplayName" Text="{Binding DisplayName}"/>
                     <TextBlock Grid.Row="3" Grid.Column="0" Text="Resource ID" />
                     <TextBox Grid.Row="3" Grid.Column="1" Name="ResourceId" Text="{Binding RoomId}"/>
                     <TextBlock Grid.Row="4" Grid.Column="1" Name="Errors" Text="{Binding Error}" Foreground="Red" FontWeight="DemiBold"/>
