@@ -251,6 +251,9 @@
     <Compile Include="..\..\..\..\include\csharp\MeetingAttendeesSearchResult.cs">
       <Link>sdk\MeetingAttendeesSearchResult.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingFeedback.cs">
+      <Link>sdk\MeetingFeedback.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\MeetingInfo.cs">
       <Link>sdk\MeetingInfo.cs</Link>
     </Compile>
