@@ -141,7 +141,7 @@ namespace VidyoConnector.ViewModel
         {
             if (LocalCameras.FirstOrDefault(x => x.Id == camera.Id) == null)
             {
-                Application.Current.Dispatcher.Invoke(() => LocalCameras.Add(camera));
+                System.Windows.Application.Current.Dispatcher.Invoke(() => LocalCameras.Add(camera));
                 Log.Info(string.Format("Added local microphone: name={0} id={1}", camera.DisplayName, camera.Id));
             }
         }
@@ -151,7 +151,7 @@ namespace VidyoConnector.ViewModel
             var cameraToRemove = LocalCameras.FirstOrDefault(x => x.Id == camera.Id);
             if (cameraToRemove != null)
             {
-                Application.Current.Dispatcher.Invoke(() => LocalCameras.Remove(cameraToRemove));
+                System.Windows.Application.Current.Dispatcher.Invoke(() => LocalCameras.Remove(cameraToRemove));
                 Log.Info(string.Format("Removed local camera: name={0} id={1}", cameraToRemove.DisplayName,
                     cameraToRemove.Id));
             }
@@ -275,7 +275,7 @@ namespace VidyoConnector.ViewModel
         {
             if (LocalMicrophones.FirstOrDefault(x => x.Id == mic.Id) == null)
             {
-                Application.Current.Dispatcher.Invoke(() => { LocalMicrophones.Add(mic); });
+                System.Windows.Application.Current.Dispatcher.Invoke(() => { LocalMicrophones.Add(mic); });
                 Log.Info(string.Format("Added local microphone: name={0} id={1}", mic.DisplayName, mic.Id));
             }
         }
@@ -285,7 +285,7 @@ namespace VidyoConnector.ViewModel
             var micToRemove = LocalMicrophones.FirstOrDefault(x => x.Id == mic.Id);
             if (micToRemove != null)
             {
-                Application.Current.Dispatcher.Invoke(() => { LocalMicrophones.Remove(micToRemove); });
+                System.Windows.Application.Current.Dispatcher.Invoke(() => { LocalMicrophones.Remove(micToRemove); });
                 Log.Info(string.Format("Removed local microphone: name={0} id={1}", micToRemove.DisplayName,
                     micToRemove.Id));
             }
@@ -396,7 +396,7 @@ namespace VidyoConnector.ViewModel
         {
             if (LocalSpeakers.FirstOrDefault(x => x.Id == speaker.Id) == null)
             {
-                Application.Current.Dispatcher.Invoke(() => { LocalSpeakers.Add(speaker); });
+                System.Windows.Application.Current.Dispatcher.Invoke(() => { LocalSpeakers.Add(speaker); });
                 Log.Info(string.Format("Added local speaker: name={0} id={1}", speaker.DisplayName, speaker.Id));
             }
         }
@@ -406,7 +406,7 @@ namespace VidyoConnector.ViewModel
             var speakerToRemove = LocalSpeakers.FirstOrDefault(x => x.Id == speaker.Id);
             if (speakerToRemove != null)
             {
-                Application.Current.Dispatcher.Invoke(() => { LocalSpeakers.Remove(speakerToRemove); });
+                System.Windows.Application.Current.Dispatcher.Invoke(() => { LocalSpeakers.Remove(speakerToRemove); });
                 Log.Info(string.Format("Removed local speaker: name={0} id={1}", speakerToRemove.DisplayName,
                     speakerToRemove.Id));
             }
@@ -465,7 +465,7 @@ namespace VidyoConnector.ViewModel
         {
             if (LocalWindows.FirstOrDefault(x => x.Id.Equals(window.Id)) == null)
             {
-                Application.Current.Dispatcher.Invoke(() => LocalWindows.Add(window));
+                System.Windows.Application.Current.Dispatcher.Invoke(() => LocalWindows.Add(window));
                 Log.Info(string.Format("Added local window: name={0} id={1}", window.DisplayName, window.Id));
             }
         }
@@ -475,7 +475,7 @@ namespace VidyoConnector.ViewModel
             var winToRemove = LocalWindows.FirstOrDefault(x => x.Id.Equals(window.Id));
             if (winToRemove != null)
             {
-                Application.Current.Dispatcher.Invoke(() => LocalWindows.Remove(winToRemove));
+                System.Windows.Application.Current.Dispatcher.Invoke(() => LocalWindows.Remove(winToRemove));
                 Log.Info(
                     string.Format("Removed local window: name={0} id={1}", winToRemove.DisplayName, winToRemove.Id));
             }
@@ -534,7 +534,7 @@ namespace VidyoConnector.ViewModel
         {
             if (LocalMonistors.FirstOrDefault(x => x.Id.Equals(monitor.Id)) == null)
             {
-                Application.Current.Dispatcher.Invoke(() => LocalMonistors.Add(monitor));
+                System.Windows.Application.Current.Dispatcher.Invoke(() => LocalMonistors.Add(monitor));
                 Log.Info(string.Format("Added local monitor: name={0} id={1}", monitor.DisplayName, monitor.Id));
             }
         }
@@ -544,7 +544,7 @@ namespace VidyoConnector.ViewModel
             var monitorToRemove = LocalMonistors.FirstOrDefault(x => x.Id.Equals(monitor.Id));
             if (monitorToRemove != null)
             {
-                Application.Current.Dispatcher.Invoke(() => LocalMonistors.Remove(monitorToRemove));
+                System.Windows.Application.Current.Dispatcher.Invoke(() => LocalMonistors.Remove(monitorToRemove));
                 Log.Info(string.Format("Removed local monitor: name={0} id={1}", monitorToRemove.DisplayName,
                     monitorToRemove.Id));
             }
@@ -797,7 +797,7 @@ namespace VidyoConnector.ViewModel
                 ConnectorPKG.Uninitialize();
                 Log.Info("VidyoConnector unitialized.");
 
-                Application.Current.Shutdown();
+                System.Windows.Application.Current.Shutdown();
             }
         }
 
