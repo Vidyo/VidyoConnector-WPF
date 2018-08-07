@@ -113,20 +113,11 @@
     <Compile Include="..\..\..\..\include\csharp\BandwidthSummaryStats.cs">
       <Link>sdk\BandwidthSummaryStats.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\include\csharp\CalendarCreateResult.cs">
-      <Link>sdk\CalendarCreateResult.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarFeedback.cs">
       <Link>sdk\CalendarFeedback.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\include\csharp\CalendarManagerDefaultServices.cs">
-      <Link>sdk\CalendarManagerDefaultServices.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarManagerFeedback.cs">
       <Link>sdk\CalendarManagerFeedback.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\include\csharp\CalendarServiceCode.cs">
-      <Link>sdk\CalendarServiceCode.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarServiceStatus.cs">
       <Link>sdk\CalendarServiceStatus.cs</Link>
@@ -241,9 +232,6 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\MeetingSearchResult.cs">
       <Link>sdk\MeetingSearchResult.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\include\csharp\MeetingType.cs">
-      <Link>sdk\MeetingType.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\NetworkInterface.cs">
       <Link>sdk\NetworkInterface.cs</Link>
