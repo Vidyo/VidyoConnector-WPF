@@ -116,17 +116,26 @@
     <Compile Include="..\..\..\..\include\csharp\BandwidthSummaryStats.cs">
       <Link>sdk\BandwidthSummaryStats.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Calendar.cs">
+      <Link>sdk\Calendar.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarCapabilityKey.cs">
       <Link>sdk\CalendarCapabilityKey.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarConnectResult.cs">
       <Link>sdk\CalendarConnectResult.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarConnProps.cs">
+      <Link>sdk\CalendarConnProps.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarCreateCode.cs">
       <Link>sdk\CalendarCreateCode.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarFeedback.cs">
       <Link>sdk\CalendarFeedback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarManager.cs">
+      <Link>sdk\CalendarManager.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarManagerFeedback.cs">
       <Link>sdk\CalendarManagerFeedback.cs</Link>
@@ -136,6 +145,9 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarState.cs">
       <Link>sdk\CalendarState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Call.cs">
+      <Link>sdk\Call.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\ChatMessage.cs">
       <Link>sdk\ChatMessage.cs</Link>
@@ -154,6 +166,12 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\Device.cs">
       <Link>sdk\Device.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Endpoint.cs">
+      <Link>sdk\Endpoint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\EndpointPKG.cs">
+      <Link>sdk\EndpointPKG.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\EndpointStats.cs">
       <Link>sdk\EndpointStats.cs</Link>
@@ -308,11 +326,20 @@
     <Compile Include="..\..\..\..\include\csharp\RemoteWindowShare.cs">
       <Link>sdk\RemoteWindowShare.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Room.cs">
+      <Link>sdk\Room.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RoomInfo.cs">
+      <Link>sdk\RoomInfo.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\RoomStats.cs">
       <Link>sdk\RoomStats.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\Statistics.cs">
       <Link>sdk\Statistics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\User.cs">
+      <Link>sdk\User.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\UserStats.cs">
       <Link>sdk\UserStats.cs</Link>
@@ -322,6 +349,12 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\VideoFrame.cs">
       <Link>sdk\VideoFrame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VirtualDeviceManager.cs">
+      <Link>sdk\VirtualDeviceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VirtualShareManager.cs">
+      <Link>sdk\VirtualShareManager.cs</Link>
     </Compile>
     <Compile Include="Commands\BindableCommand.cs" />
     <Compile Include="Converters\ConnectionStateToVisibilityConverter.cs" />
