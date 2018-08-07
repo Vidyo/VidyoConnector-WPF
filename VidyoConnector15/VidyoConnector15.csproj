@@ -107,11 +107,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="..\..\..\..\include\csharp\Application.cs">
+      <Link>sdk\Application.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\AudioFrame.cs">
       <Link>sdk\AudioFrame.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\BandwidthSummaryStats.cs">
       <Link>sdk\BandwidthSummaryStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarCapabilityKey.cs">
+      <Link>sdk\CalendarCapabilityKey.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarConnectResult.cs">
+      <Link>sdk\CalendarConnectResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarCreateCode.cs">
+      <Link>sdk\CalendarCreateCode.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarFeedback.cs">
       <Link>sdk\CalendarFeedback.cs</Link>
@@ -145,6 +157,9 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\EndpointStats.cs">
       <Link>sdk\EndpointStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\EventSchedule.cs">
+      <Link>sdk\EventSchedule.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\FormField.cs">
       <Link>sdk\FormField.cs</Link>
@@ -209,6 +224,9 @@
     <Compile Include="..\..\..\..\include\csharp\Logger.cs">
       <Link>sdk\Logger.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LoggerCategory.cs">
+      <Link>sdk\LoggerCategory.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\LogRecord.cs">
       <Link>sdk\LogRecord.cs</Link>
     </Compile>
@@ -230,6 +248,12 @@
     <Compile Include="..\..\..\..\include\csharp\MeetingAttendee.cs">
       <Link>sdk\MeetingAttendee.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingAttendeesSearchResult.cs">
+      <Link>sdk\MeetingAttendeesSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingInfo.cs">
+      <Link>sdk\MeetingInfo.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\MeetingSearchResult.cs">
       <Link>sdk\MeetingSearchResult.cs</Link>
     </Compile>
@@ -247,6 +271,9 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\ParticipantStats.cs">
       <Link>sdk\ParticipantStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Property.cs">
+      <Link>sdk\Property.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\RateShaperStats.cs">
       <Link>sdk\RateShaperStats.cs</Link>
