@@ -746,7 +746,7 @@ namespace VidyoConnector.ViewModel
             Error = null;
             try
             {
-                var res = _connector.Connect(Host, Token, UserName, RoomId, new ConnectionListener(this));
+                var res = _connector.Connect(Host, Token, DisplayName, RoomId, new ConnectionListener(this));
                 Log.DebugFormat("Returned '{0}'", res);
             }
             catch (Exception ex)
@@ -834,7 +834,7 @@ namespace VidyoConnector.ViewModel
 
                     if (split[0].Contains("host")) Host = split[1];
                     else if (split[0].Contains("token")) Token = split[1];
-                    else if (split[0].Contains("displayName")) UserName = split[1];
+                    else if (split[0].Contains("displayName")) DisplayName = split[1];
                     else if (split[0].Contains("recourceId")) RoomId = split[1];
                     else if (split[0].Contains("hideConfig")) Log.Warn("hideConfig property is not implemented yet.");
                     else if (split[0].Contains("autoJoin")) Log.Warn("autoJoin property is not implemented yet.");
