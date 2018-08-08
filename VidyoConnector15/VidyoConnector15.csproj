@@ -465,11 +465,31 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Content Include="..\..\..\..\lib\windows\x64\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Content Include="..\..\..\..\lib\windows\x64\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Content Include="..\..\..\..\lib\windows\Win32\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Content Include="..\..\..\..\lib\windows\Win32\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>c:\windows\system32\xcopy.exe /y "$(SolutionDir)\..\..\..\lib\windows\$(Platform)\Release\libVidyoClient.dll" "$(TargetDir)"
-</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
