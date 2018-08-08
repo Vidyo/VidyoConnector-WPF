@@ -16,27 +16,6 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Images\small.ico</ApplicationIcon>
   </PropertyGroup>
@@ -107,32 +86,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="..\..\..\..\include\csharp\Application.cs">
+      <Link>sdk\Application.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\AudioFrame.cs">
       <Link>sdk\AudioFrame.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\BandwidthSummaryStats.cs">
       <Link>sdk\BandwidthSummaryStats.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\include\csharp\CalendarCreateResult.cs">
-      <Link>sdk\CalendarCreateResult.cs</Link>
+    <Compile Include="..\..\..\..\include\csharp\Calendar.cs">
+      <Link>sdk\Calendar.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarCapabilityKey.cs">
+      <Link>sdk\CalendarCapabilityKey.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarConnectResult.cs">
+      <Link>sdk\CalendarConnectResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarConnProps.cs">
+      <Link>sdk\CalendarConnProps.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\CalendarCreateCode.cs">
+      <Link>sdk\CalendarCreateCode.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarFeedback.cs">
       <Link>sdk\CalendarFeedback.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\include\csharp\CalendarManagerDefaultServices.cs">
-      <Link>sdk\CalendarManagerDefaultServices.cs</Link>
+    <Compile Include="..\..\..\..\include\csharp\CalendarManager.cs">
+      <Link>sdk\CalendarManager.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarManagerFeedback.cs">
       <Link>sdk\CalendarManagerFeedback.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\include\csharp\CalendarServiceCode.cs">
-      <Link>sdk\CalendarServiceCode.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarServiceStatus.cs">
       <Link>sdk\CalendarServiceStatus.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\CalendarState.cs">
       <Link>sdk\CalendarState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Call.cs">
+      <Link>sdk\Call.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\ChatMessage.cs">
       <Link>sdk\ChatMessage.cs</Link>
@@ -152,8 +146,17 @@
     <Compile Include="..\..\..\..\include\csharp\Device.cs">
       <Link>sdk\Device.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Endpoint.cs">
+      <Link>sdk\Endpoint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\EndpointPKG.cs">
+      <Link>sdk\EndpointPKG.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\EndpointStats.cs">
       <Link>sdk\EndpointStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\EventSchedule.cs">
+      <Link>sdk\EventSchedule.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\FormField.cs">
       <Link>sdk\FormField.cs</Link>
@@ -218,6 +221,9 @@
     <Compile Include="..\..\..\..\include\csharp\Logger.cs">
       <Link>sdk\Logger.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\LoggerCategory.cs">
+      <Link>sdk\LoggerCategory.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\LogRecord.cs">
       <Link>sdk\LogRecord.cs</Link>
     </Compile>
@@ -239,11 +245,17 @@
     <Compile Include="..\..\..\..\include\csharp\MeetingAttendee.cs">
       <Link>sdk\MeetingAttendee.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingAttendeesSearchResult.cs">
+      <Link>sdk\MeetingAttendeesSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingFeedback.cs">
+      <Link>sdk\MeetingFeedback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MeetingInfo.cs">
+      <Link>sdk\MeetingInfo.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\MeetingSearchResult.cs">
       <Link>sdk\MeetingSearchResult.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\include\csharp\MeetingType.cs">
-      <Link>sdk\MeetingType.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\NetworkInterface.cs">
       <Link>sdk\NetworkInterface.cs</Link>
@@ -259,6 +271,9 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\ParticipantStats.cs">
       <Link>sdk\ParticipantStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Property.cs">
+      <Link>sdk\Property.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\RateShaperStats.cs">
       <Link>sdk\RateShaperStats.cs</Link>
@@ -290,11 +305,20 @@
     <Compile Include="..\..\..\..\include\csharp\RemoteWindowShare.cs">
       <Link>sdk\RemoteWindowShare.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\Room.cs">
+      <Link>sdk\Room.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\RoomInfo.cs">
+      <Link>sdk\RoomInfo.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\RoomStats.cs">
       <Link>sdk\RoomStats.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\Statistics.cs">
       <Link>sdk\Statistics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\User.cs">
+      <Link>sdk\User.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\UserStats.cs">
       <Link>sdk\UserStats.cs</Link>
@@ -304,6 +328,12 @@
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\VideoFrame.cs">
       <Link>sdk\VideoFrame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VirtualDeviceManager.cs">
+      <Link>sdk\VirtualDeviceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VirtualShareManager.cs">
+      <Link>sdk\VirtualShareManager.cs</Link>
     </Compile>
     <Compile Include="Commands\BindableCommand.cs" />
     <Compile Include="Converters\ConnectionStateToVisibilityConverter.cs" />
@@ -414,11 +444,31 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Content Include="..\..\..\..\lib\windows\x64\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Content Include="..\..\..\..\lib\windows\x64\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Content Include="..\..\..\..\lib\windows\Win32\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Content Include="..\..\..\..\lib\windows\Win32\Release\libVidyoClient.dll">
+      <Link>libVidyoClient.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>c:\windows\system32\xcopy.exe /y "$(SolutionDir)\..\..\..\lib\windows\$(Platform)\Release\libVidyoClient.dll" "$(TargetDir)"
-</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
