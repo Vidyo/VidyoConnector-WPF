@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VidyoConnector</RootNamespace>
     <AssemblyName>VidyoConnector</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -329,11 +329,17 @@
     <Compile Include="..\..\..\..\include\csharp\VideoFrame.cs">
       <Link>sdk\VideoFrame.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VideoPlane.cs">
+      <Link>sdk\VideoPlane.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\VirtualDeviceManager.cs">
       <Link>sdk\VirtualDeviceManager.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\include\csharp\VirtualShareManager.cs">
       <Link>sdk\VirtualShareManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VirtualWindowShare.cs">
+      <Link>sdk\VirtualWindowShare.cs</Link>
     </Compile>
     <Compile Include="Commands\BindableCommand.cs" />
     <Compile Include="Converters\ConnectionStateToVisibilityConverter.cs" />
@@ -439,16 +445,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Vidyo.io-Vertical-Dark%402x.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <Content Include="..\..\..\..\lib\windows\x64\Release\libVidyoClient.dll">
       <Link>libVidyoClient.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Vidyo.io-Vertical-Dark%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <Content Include="..\..\..\..\lib\windows\x64\Release\libVidyoClient.dll">
@@ -467,6 +473,11 @@
       <Link>libVidyoClient.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -211,7 +211,6 @@
             <WindowsFormsHost x:Name="wfHost" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="FrameworkElement_OnSizeChanged">
                 <winForms:Panel x:Name="VideoPanel"/>
             </WindowsFormsHost>
-            <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="342,263,0,0" VerticalAlignment="Top" Width="76"/>
         </Grid>
 
         <DockPanel Grid.Row="2" HorizontalAlignment="Stretch" Background="Black" VerticalAlignment="Center" Grid.ColumnSpan="2">
@@ -309,6 +308,13 @@
                                         </Style>
                                     </Image.Style>
                                 </Image>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Name="BtnChat" Margin="50,15,0,15" Command="{Binding}" ToolTip="Chat">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="Images/chat.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
