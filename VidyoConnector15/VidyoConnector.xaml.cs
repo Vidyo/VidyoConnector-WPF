@@ -83,5 +83,21 @@ namespace VidyoConnector
                 ((VidyoConnectorViewModel)DataContext).SetSelectedLocalWindow(selectedMenuItem.DataContext);
             }
         }
+
+        private void BtnChat_Click(object sender, RoutedEventArgs e)
+        {
+            var connectionState = ((VidyoConnectorViewModel)DataContext).ConnectionState;
+            if (connectionState == Model.ConnectionState.Connected)
+            {
+                if (gridChat.Visibility == Visibility.Collapsed)
+                {
+                    gridChat.Visibility = Visibility.Visible;
+                }
+                else if (gridChat.Visibility == Visibility.Visible)
+                {
+                    gridChat.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
     }
 }
