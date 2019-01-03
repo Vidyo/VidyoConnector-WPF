@@ -342,6 +342,7 @@
       <Link>sdk\VirtualWindowShare.cs</Link>
     </Compile>
     <Compile Include="Commands\BindableCommand.cs" />
+    <Compile Include="Converters\ConnectionStateToEnabledConverter.cs" />
     <Compile Include="Converters\ConnectionStateToVisibilityConverter.cs" />
     <Compile Include="Listeners\ConnectionListener.cs" />
     <Compile Include="Listeners\ListenerBase.cs" />
@@ -349,7 +350,9 @@
     <Compile Include="Listeners\LocalMonitorListener.cs" />
     <Compile Include="Listeners\LocalSpeakerListener.cs" />
     <Compile Include="Listeners\LogListener.cs" />
+    <Compile Include="Listeners\MessageListener.cs" />
     <Compile Include="Listeners\ParticipantListener.cs" />
+    <Compile Include="Model\ChatMessageModel.cs" />
     <Compile Include="Model\ConnectionState.cs" />
     <Compile Include="Model\LocalCameraModel.cs" />
     <Compile Include="Listeners\LocalCameraListener.cs" />

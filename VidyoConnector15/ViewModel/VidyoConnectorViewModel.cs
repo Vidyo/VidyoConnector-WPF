@@ -32,6 +32,7 @@ namespace VidyoConnector.ViewModel
             LocalSpeakers = new ObservableCollection<LocalSpeakerModel>();
             LocalWindows = new ObservableCollection<LocalWindowShareModel>();
             LocalMonistors = new ObservableCollection<LocalMonitorModel>();
+            ChatMessages = new ObservableCollection<ChatMessageModel>();
             Host = @"prod.vidyo.io";
         }
 
@@ -65,6 +66,7 @@ namespace VidyoConnector.ViewModel
             _connector.RegisterParticipantEventListener(new ParticipantListener(this));
             _connector.RegisterLocalMonitorEventListener(new LocalMonitorListener(this));
             //_connector.RegisterLogEventListener(new LogListener(this), "*@VidyoClient");
+            _connector.RegisterMessageEventListener(new MessageListener(this));
 
             // We are not in call when application started.
             ConnectionState = ConnectionState.NotConnected;
@@ -638,6 +640,16 @@ namespace VidyoConnector.ViewModel
             }
         }
 
+        private string _chatMessage;
+        public string ChatMessage {
+            get  { return _chatMessage; }
+            set
+            {
+                _chatMessage = value;
+                OnPropertyChanged();
+            }
+        }
+
         private string _participantsActivityLog;
         public string ParticipantsActivityLog {
             get { return _participantsActivityLog; }
@@ -822,6 +834,16 @@ namespace VidyoConnector.ViewModel
             }
         }
 
+        private void SendChatMessage()
+        {
+            if (ConnectionState == ConnectionState.Connected)
+            {
+                _connector.SendChatMessage(ChatMessage);
+                AddChatMessage("Me", ChatMessage);
+                ChatMessage = string.Empty;
+            }
+        }
+
         private void ParseCommandLineArgs()
         {
             Log.Info("Parsing command line arguments...");
@@ -852,6 +874,19 @@ namespace VidyoConnector.ViewModel
             {
                 Log.ErrorFormat("Error while parsing command line arguments: {0}", ex.Message);
             }
+        }
+
+        #endregion
+
+        #region Chat
+
+        public ObservableCollection<ChatMessageModel> ChatMessages { get; set; }
+
+        public void AddChatMessage(string senderName, string messageBody)
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                ChatMessages.Add(new ChatMessageModel { Sender = senderName, Message = messageBody })); 
+            
         }
 
         #endregion
@@ -924,6 +959,9 @@ namespace VidyoConnector.ViewModel
 
         private ICommand _commandToggleDebug;
         public ICommand CommandToggleDebug { get { return GetCommand(ref _commandToggleDebug, x => ToggleDebug()); } }
+
+        private ICommand _commandSendChatMessage;
+        public ICommand CommandSendChatMessage { get { return GetCommand(ref _commandSendChatMessage, x => SendChatMessage()); } }
 
         private static ICommand GetCommand(ref ICommand command, Action<object> action, bool isCanExecute = true)
         {

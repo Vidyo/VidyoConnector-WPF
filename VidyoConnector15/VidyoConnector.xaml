@@ -14,6 +14,7 @@
     </Window.DataContext>
     <Window.Resources>
         <converters:ConnectionStateToVisibilityConverter x:Key="ConnectionStateToVisibilityConverter"/>
+        <converters:ConnectionStateToEnabledConverter x:Key="ConnectionStateToEnabledConverter"/>
     </Window.Resources>
     <Window.InputBindings>
         <KeyBinding Key="A" Modifiers="Control" Command="{Binding CommandAbout}"/>
@@ -153,6 +154,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Margin="10,0,20,0">
@@ -211,6 +213,32 @@
             <WindowsFormsHost x:Name="wfHost" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="FrameworkElement_OnSizeChanged">
                 <winForms:Panel x:Name="VideoPanel"/>
             </WindowsFormsHost>
+
+            <Grid x:Name="gridChat" Grid.Column="2" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ListView Name="lvChat" Width="Auto" Height="Auto" ItemsSource="{Binding ChatMessages}">
+                    <ListView.View>
+                        <GridView>
+                            <GridView.ColumnHeaderContainerStyle>
+                                <Style BasedOn="{StaticResource {x:Type GridViewColumnHeader}}" TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="IsHitTestVisible" Value="False"/>
+                                </Style>
+                            </GridView.ColumnHeaderContainerStyle>
+                            <GridViewColumn Header="User" Width="75" DisplayMemberBinding="{Binding Sender}"/>
+                            <GridViewColumn Header="Message" Width="175" DisplayMemberBinding="{Binding Message}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="30">
+                    <TextBox x:Name="tbMessage" Margin="5,5,5,5" Width="215" Text="{Binding ChatMessage}"/>
+                    <Button x:Name="btnSendChatMessage" Width="Auto" Content="Send" Margin="0,5,5,5" Command="{Binding CommandSendChatMessage}"/>
+                </StackPanel>
+            </Grid>
         </Grid>
 
         <DockPanel Grid.Row="2" HorizontalAlignment="Stretch" Background="Black" VerticalAlignment="Center" Grid.ColumnSpan="2">
@@ -311,7 +339,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button Name="BtnChat" Margin="50,15,0,15" Command="{Binding}" ToolTip="Chat">
+                    <Button Name="BtnChat" Margin="50,15,0,15" ToolTip="Chat" Click="BtnChat_Click" IsEnabled="{Binding ConnectionState, Converter={StaticResource ConnectionStateToEnabledConverter}}">
                         <Button.Template>
                             <ControlTemplate>
                                 <Image Source="Images/chat.png"/>
