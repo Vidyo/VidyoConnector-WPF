@@ -236,7 +236,13 @@
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="30">
                     <TextBox x:Name="tbMessage" Margin="5,5,5,5" Width="215" Text="{Binding ChatMessage}"/>
-                    <Button x:Name="btnSendChatMessage" Width="Auto" Content="Send" Margin="0,5,5,5" Command="{Binding CommandSendChatMessage}"/>
+                    <Button x:Name="btnSendChatMessage" Width="Auto" Content="Send" Margin="0,5,5,5" Command="{Binding CommandSendChatMessage}">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="Images/sendChat.png"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Grid>
