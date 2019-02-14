@@ -358,7 +358,6 @@
     <Compile Include="Listeners\LogListener.cs" />
     <Compile Include="Listeners\MessageListener.cs" />
     <Compile Include="Listeners\ParticipantListener.cs" />
-    <Compile Include="Listeners\PreviewListener.cs" />
     <Compile Include="Model\ChatMessageModel.cs" />
     <Compile Include="Model\ConnectionState.cs" />
     <Compile Include="Model\LocalCameraModel.cs" />
