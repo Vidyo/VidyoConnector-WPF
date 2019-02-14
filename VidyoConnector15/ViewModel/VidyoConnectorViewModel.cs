@@ -774,10 +774,6 @@ namespace VidyoConnector.ViewModel
             _connector.Disconnect();
             Log.Info("Attempted to disconnect.");
 
-            // Chaning app state here to NotConnected as in some cases we don't recieve OnDisconnected callback in listener.
-            // I.e. when to pass Token in wrong format ("srgb") and try to Connect, we will never recieve OnFailure callback and app will be in "OperationInProgress" state for a while.
-            // If then the user clicks on 'LeaveCall' the _connector.Disconect() will execute, but we weren't connected, therefore we won't recieve OnDisconnected callback.
-            // So, changing state to be able to try to Join call again with another token.
             ConnectionState = ConnectionState.NotConnected;
         }
 
