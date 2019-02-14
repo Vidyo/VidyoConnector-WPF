@@ -230,6 +230,9 @@
     <Compile Include="..\..\..\..\include\csharp\LogStats.cs">
       <Link>sdk\LogStats.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\MarshalPtrToUtf8.cs">
+      <Link>sdk\MarshalPtrToUtf8.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\MediaConnectionTransportInfo.cs">
       <Link>sdk\MediaConnectionTransportInfo.cs</Link>
     </Compile>
