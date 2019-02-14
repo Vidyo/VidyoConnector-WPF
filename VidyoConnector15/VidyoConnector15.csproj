@@ -59,6 +59,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -355,6 +358,7 @@
     <Compile Include="Listeners\LogListener.cs" />
     <Compile Include="Listeners\MessageListener.cs" />
     <Compile Include="Listeners\ParticipantListener.cs" />
+    <Compile Include="Listeners\PreviewListener.cs" />
     <Compile Include="Model\ChatMessageModel.cs" />
     <Compile Include="Model\ConnectionState.cs" />
     <Compile Include="Model\LocalCameraModel.cs" />
@@ -398,6 +402,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
