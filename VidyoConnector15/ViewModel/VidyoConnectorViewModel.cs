@@ -50,7 +50,7 @@ namespace VidyoConnector.ViewModel
             _connector = new Connector(handle, Connector.ConnectorViewStyle.ConnectorviewstyleDefault, 8, "all@VidyoClient", "VidyoClient.log", 0);
 
             // This should be called on each window resizing.
-            _connector.ShowViewAt(handle, 0, 0, width, height);
+            _connector.ShowViewAtPoints(handle, 0, 0, width, height);
             Log.Info(string.Format("Showing view with width={0} and height={1}", width, height));
 
             // Adding Null's to devices collection, which is 'None' in GUI. Selecting 'None' means no device will be used.
@@ -88,7 +88,7 @@ namespace VidyoConnector.ViewModel
         /// <param name="height">Height of video area.</param>
         public void AdjustVideoPanelSize(IntPtr handle, uint width, uint height)
         {
-            _connector.ShowViewAt(handle, 0, 0, width, height);
+            _connector.ShowViewAtPoints(handle, 0, 0, width, height);
         }
 
         #region Devices
