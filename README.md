@@ -1,10 +1,10 @@
-# VidyoConnector-WPF
+# vidyo.io-connector-wpf
 
 ## Clone Repository
-git clone https://github.com/Vidyo/VidyoConnector-WPF.git
+git clone https://github.com/Vidyo/vidyo.io-connector-wpf.git
 
 ## Overview
-VidyoConnector-WPF is a Windows desktop application written in C# using WPF technology and MVVM approach. It contains single project within solution. 
+vidyo.io-connector-wpf is a Windows desktop application written in C# using WPF technology and MVVM approach. It contains single project within solution. 
 
 ## Acquire Framework
 1. Download the latest Vidyo.io Windows SDK package for VisualStudio 2013 (https://static.vidyo.io/latest/package/VidyoClient-WindowsSDK.zip) or for VisualStudio 2017 (https://static.vidyo.io/latest/package/VidyoClient-WinVS2017SDK.zip).
