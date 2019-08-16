@@ -98,6 +98,9 @@
     <Compile Include="..\..\..\..\include\csharp\BandwidthSummaryStats.cs">
       <Link>sdk\BandwidthSummaryStats.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\ByteArrayHelper.cs">
+      <Link>sdk\ByteArrayHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\include\csharp\Calendar.cs">
       <Link>sdk\Calendar.cs</Link>
     </Compile>
@@ -344,8 +347,8 @@
     <Compile Include="..\..\..\..\include\csharp\VirtualShareManager.cs">
       <Link>sdk\VirtualShareManager.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\include\csharp\VirtualWindowShare.cs">
-      <Link>sdk\VirtualWindowShare.cs</Link>
+    <Compile Include="..\..\..\..\include\csharp\VirtualVideoSource.cs">
+      <Link>sdk\VirtualVideoSource.cs</Link>
     </Compile>
     <Compile Include="Commands\BindableCommand.cs" />
     <Compile Include="Converters\ConnectionStateToEnabledConverter.cs" />
