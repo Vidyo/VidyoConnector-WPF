@@ -353,6 +353,9 @@
     <Compile Include="..\..\..\..\include\csharp\VirtualVideoSource.cs">
       <Link>sdk\VirtualVideoSource.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\include\csharp\VirtualWindowShare.cs">
+      <Link>sdk\VirtualWindowShare.cs</Link>
+    </Compile>
     <Compile Include="Commands\BindableCommand.cs" />
     <Compile Include="Converters\ConnectionStateToEnabledConverter.cs" />
     <Compile Include="Converters\ConnectionStateToVisibilityConverter.cs" />
